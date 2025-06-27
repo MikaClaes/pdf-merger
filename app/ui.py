@@ -1,4 +1,5 @@
 import tkinter as tk
+import merger
 
 root = tk.Tk()
 root.title("PDF Merger")
@@ -10,12 +11,15 @@ root.configure(bg="#061A40")
 label_files = tk.Label(root, text="Files:", font=("Arial", 12, "bold"), bg="#061A40", fg="#FF7B00")
 label_files.place(x=20, y=20)
 
-btn_upload = tk.Button(root, text="Upload file", width=15)
+btn_upload = tk.Button(root, text="Upload file", width=15, command=merger.choose_files)
 btn_upload.place(x=80, y=20)
 
 # File Display Area
 frame_files = tk.Frame(root, bd=2, relief="solid", width=300, height=325, bg="#FEFEFE")
 frame_files.place(x=20, y=75)
+
+listbox_files = tk.Listbox(frame_files, width=43, height=20, bg="#FFFFFF", fg="#000000", selectbackground="#FF7B00")
+listbox_files.pack(padx=5, pady=5)
 
 # Merged File Location
 label_location = tk.Label(root, text="Location", font=("Arial", 12, "bold"), bg="#061A40", fg="#FF7B00")
