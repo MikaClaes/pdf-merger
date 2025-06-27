@@ -25,10 +25,10 @@ listbox_files.pack(padx=5, pady=5)
 label_location = tk.Label(root, text="Location", font=("Arial", 12, "bold"), bg="#061A40", fg="#FF7B00")
 label_location.place(x=378, y=120)
 
-entry_location = tk.Entry(root, width=40, bg="#FEFEFE")
+entry_location = tk.Entry(root, width=40, bg="#FEFEFE", state="readonly")
 entry_location.place(x=380, y=150)
 
-btn_choose = tk.Button(root, text="Choose location", width=15)
+btn_choose = tk.Button(root, text="Choose location", width=15, command=merger.get_file_location)
 btn_choose.place(x=630, y=146)
 
 # File Name
