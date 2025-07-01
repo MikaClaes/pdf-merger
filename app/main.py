@@ -1,5 +1,5 @@
 import tkinter as tk
-import merger  # Business logic and file-handling functions
+import app.merger_logic as merger  # Business logic and file-handling functions
 
 # Initialize main application window
 root = tk.Tk()
@@ -7,8 +7,6 @@ root.title("PDF Merger")
 root.geometry("800x420")
 root.resizable(False, False)
 root.configure(bg="#061A40")
-
-
 
 # --------------------
 # Upload Section
